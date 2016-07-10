@@ -1,0 +1,10 @@
+
+                    Differences between abstract class and interface
+
+1. Abstract class can have constant and fields - interface can't have fields and constants.
+2.Abstract class doesn't support multiple inheritance - Interface supports multiple inheritance.
+3.Abstract class is inherited (extends) -  Interface is implemented (implements).
+4.Abstract class can provide the implementation of interface - Interface can't provide the implementation of abstract class.
+5.The abstract keyword is used to declare abstract class - The interface keyword is used to declare interface.
+6.Abstract class can have static methods, main method and constructor - Interface can't have static methods and constructor.
+7.It is necessary to implement(contract) all interface members, not in the abstract classes.
