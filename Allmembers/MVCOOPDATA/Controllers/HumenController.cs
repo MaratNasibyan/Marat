@@ -16,6 +16,7 @@ namespace MVCOOPDATA.Controllers
         private MVCEntities db = new MVCEntities();
 
         // GET: Humen
+        
         public async Task<ActionResult> Index()
         {
             return View(await db.Humen.ToListAsync());
@@ -55,7 +56,7 @@ namespace MVCOOPDATA.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-
+            
             return View(human);
         }
 
