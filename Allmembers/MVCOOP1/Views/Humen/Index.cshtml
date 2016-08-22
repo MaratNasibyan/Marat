@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MVCOOP1.Models.Human>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SURNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATEBIRTH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SURNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATEBIRTH)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ISN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ISN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ISN })
+        </td>
+    </tr>
+}
+  
+        
+    
+</table>
+@Html.ActionLink("Info", "Info")
